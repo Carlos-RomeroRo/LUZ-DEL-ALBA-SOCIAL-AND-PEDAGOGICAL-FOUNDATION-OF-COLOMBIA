@@ -26,7 +26,7 @@ export default function Home() {
       <section className="relative flex items-center justify-center min-h-screen w-full">
         {/* Video de fondo */}
         <video
-          src="https://videocdn.cdnpk.net/videos/3de5ee2b-160f-41ae-bfb5-8383895e6d15/horizontal/previews/clear/large.mp4?token=exp=1759590261~hmac=d1a92020795dbde0bd32184c8ab41ebd0412315ad499bd40885d78a916148c41"
+          src="https://res.cloudinary.com/dadlhhv4t/video/upload/v1759612863/Ni%C3%B1os_jugando_Luz_del_Alba_co7wmr.mp4"
           autoPlay
           muted
           loop
