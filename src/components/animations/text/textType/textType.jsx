@@ -2,7 +2,7 @@
 
 import { gsap } from 'gsap';
 import { createElement, useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import './TextType.css';
+import './textType.css';
 
 const TextType = ({
   text,
