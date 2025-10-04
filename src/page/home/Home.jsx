@@ -1,5 +1,5 @@
 import '../../components/navbar/navBar'
-import { ScrollCard } from '../../components/animations/ScrollCard' 
+import { Card } from "flowbite-react";
 
 
 export default function Home() {
@@ -54,58 +54,118 @@ export default function Home() {
             </div>
         </div>
       </section>
-      <section className='w-full h-auto  py-10 px-5'>
-            <h1 className='flex justify-center align-middle text-white text-[clamp(28px,6vw,60px)] font-bold'>NUESTROS SERVICIOS</h1>
-            <div className="">
-              <div className='w-full h-auto flex flex-wrap justify-around gap-10'>
-                  <ScrollCard
-                  splashContent="Educación"
-                  content={<img src="https://images.pexels.com/photos/1148998/pexels-photo-1148998.jpeg" alt="Globe" className="w-52 h-48 rounded-lg" />}
-                  hueA={200}
-                  hueB={250}
-                  size={{ width: 250, height: 300 }}
-                />
-                <ScrollCard
-                  splashContent="Educación"
-                  content={<img src="https://images.pexels.com/photos/1148998/pexels-photo-1148998.jpeg" alt="Globe" className="w-52 h-48 rounded-lg"/>}
-                  hueA={200}
-                  hueB={250}
-                  size={{ width: 250, height: 300 }}
-                />
-                <ScrollCard
-                  splashContent="Educación"
-                  content={<img src="https://images.pexels.com/photos/1148998/pexels-photo-1148998.jpeg" alt="Globe" className="w-52 h-48 rounded-lg" />}
-                  hueA={200}
-                  hueB={250}
-                  size={{ width: 250, height: 300 }}
-                />
+        <section className='w-full h-auto py-10 px-5 overflow-hidden'>
+          <h1 className='flex justify-center align-middle text-white text-[clamp(28px,6vw,60px)] font-bold'>NUESTROS SERVICIOS</h1>
+          <div className="flex flex-wrap justify-center pt-12 gap-8">
+            <Card className="max-w-sm bg-[#12314D] rounded-lg overflow-hidden  transition-transform transform hover:scale-105 cursor-pointer">
+              <img
+                className="w-full h-full object-cover"
+                src="https://images.pexels.com/photos/1148998/pexels-photo-1148998.jpeg"
+                alt="Acompañamiento social"
+              />
+              <div className="p-4">
+                <h5 className="text-2xl font-bold text-white text-center">
+                  Acompañamiento social
+                </h5>
               </div>
-
-              <div className='w-full h-auto flex flex-wrap justify-center mt-24 space-x-40'>
-                  <ScrollCard
-                  splashContent="Educación"
-                  content={<img src="https://images.pexels.com/photos/1148998/pexels-photo-1148998.jpeg" alt="Globe" className="w-52 h-48 rounded-lg" />}
-                  hueA={200}
-                  hueB={250}
-                  size={{ width: 250, height: 300 }}
-                  />
-                  <ScrollCard
-                  splashContent="Educación"
-                  content={<img src="https://images.pexels.com/photos/1148998/pexels-photo-1148998.jpeg" alt="Globe" className="w-52 h-48 rounded-lg" />}
-                  hueA={200}
-                  hueB={250}
-                  size={{ width: 250, height: 300 }}
-                  />
+              <div className='flex flex-grow justify-center align-middle mb-4'>
+              <button
+                type="button"
+                className="text-white bg-yellow-500 hover:bg-yellow-600 focus:outline-none focus:ring-4 focus:ring-yellow-400 font-semibold rounded-full text-lg px-8 py-3 transition-transform transform hover:scale-105"
+              >
+                 Ver más
+              </button>
               </div>
-                
-                
-            </div>
-      </section>
+            </Card>
 
+            <Card className="max-w-sm bg-[#12314D] rounded-lg overflow-hidden  transition-transform transform hover:scale-105 cursor-pointer">
+              <img
+                className="w-full h-full object-cover"
+                src="https://images.pexels.com/photos/1648387/pexels-photo-1648387.jpeg"
+                alt="Asesorías enfocadas a familias"
+              />
+              <div className="p-4">
+                <h5 className="text-2xl font-bold text-white text-center">
+                  Asesorías enfocadas a familias
+                </h5>
+              </div>
+              <div className='flex flex-grow  justify-center align-middle mb-4'>
+              <button
+                type="button"
+                className="text-white bg-yellow-500 hover:bg-yellow-600 focus:outline-none focus:ring-4 focus:ring-yellow-400 font-semibold rounded-full text-lg px-8 py-3 transition-transform transform hover:scale-105"
+              >
+                 Ver más
+              </button>
+              </div>
+            </Card>
 
+            <Card className="max-w-sm bg-[#12314D] rounded-lg overflow-hidden  transition-transform transform hover:scale-105 cursor-pointer">
+              <img
+                className="w-full h-full object-cover"
+                src="https://images.pexels.com/photos/3992949/pexels-photo-3992949.jpeg"
+                alt="Seguimiento pedagógico"
+              />
+              <div className="p-4">
+                <h5 className="text-2xl font-bold text-white text-center">
+                  Seguimiento pedagógico
+                </h5>
+              </div>
+              <div className='flex flex-grow justify-center align-middle mb-4'>
+              <button
+                type="button"
+                className="text-white bg-yellow-500 hover:bg-yellow-600 focus:outline-none focus:ring-4 focus:ring-yellow-400 font-semibold rounded-full text-lg px-8 py-3 transition-transform transform hover:scale-105"
+              >
+                 Ver más
+              </button>
+              </div>
+            </Card>
 
+            <Card className="max-w-sm bg-[#12314D] rounded-lg overflow-hidden  transition-transform transform hover:scale-105 cursor-pointer">
+              <img
+                className="w-full h-full object-cover"
+                src="https://images.pexels.com/photos/208216/pexels-photo-208216.jpeg"
+                alt="Jornada de fortalecimiento espiritual"
+              />
+              <div className="p-4">
+                <h5 className="text-2xl font-bold text-white text-center">
+                  Jornada de fortalecimiento espiritual
+                </h5>
+              </div>
+              <div className='flex flex-grow justify-center align-middle mb-4'>
+              <button
+                type="button"
+                className="text-white bg-yellow-500 hover:bg-yellow-600 focus:outline-none focus:ring-4 focus:ring-yellow-400 font-semibold rounded-full text-lg px-8 py-3 transition-transform transform hover:scale-105"
+              >
+                 Ver más
+              </button>
+              </div>
+            </Card>
 
+            <Card className="max-w-sm bg-[#12314D] rounded-lg overflow-hidden transition-transform transform hover:scale-105 cursor-pointer">
+              <img
+                className="w-full h-full object-cover"
+                src="https://images.pexels.com/photos/1449934/pexels-photo-1449934.jpeg"
+                alt="Actividades lúdico-recreativas"
+              />
+              <div className="p-4">
+                <h5 className="text-2xl font-bold text-white text-center">
+                  Actividades <br />lúdico-recreativas
+                </h5>
+              </div>
+              <div className='flex flex-grow justify-center align-middle mb-4'>
+              <button
+                type="button"
+                className="text-white bg-yellow-500 hover:bg-yellow-600 focus:outline-none focus:ring-4 focus:ring-yellow-400 font-semibold rounded-full text-lg px-8 py-3 transition-transform transform hover:scale-105"
+              >
+                 Ver más
+              </button>
+              </div>
+            </Card>
 
+            
+              
+          </div>
+        </section>
     </div>
   );
 }
