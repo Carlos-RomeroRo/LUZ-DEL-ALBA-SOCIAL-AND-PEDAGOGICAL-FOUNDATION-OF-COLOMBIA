@@ -2,7 +2,8 @@
 export default {
   content: [
     "./index.html",
-    "./src/**/*.{js,jsx}"
+    "./src/**/*.{js,jsx}",
+    "node_modules/preline/dist/*.js"
   ],
   theme: {
     extend: {
