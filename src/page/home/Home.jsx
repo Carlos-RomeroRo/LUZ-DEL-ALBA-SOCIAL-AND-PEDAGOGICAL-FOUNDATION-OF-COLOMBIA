@@ -6,6 +6,9 @@ import FadeContent from '../../components/animations/animateComponents/fadeConte
 import Particles from '../../components/animations/background/particles/particles';
 import BlurText from '../../components/animations/text/blurText/blurText';
 import TextType from '../../components/animations/text/textType/textType';
+import CarouselTransition from "../../components/carousel/CarouselTransition";
+
+
 import '../../components/navbar/navBar';
 
 
@@ -235,11 +238,45 @@ export default function Home() {
                   </div>
                 </Card>
             </FadeContent>
-                
-            
-                
           </div>
         </section>
+
+        <section className="relative flex min-h-screen w-full bg-black">
+        {/* Carrusel en el fondo */}
+        <div className="absolute inset-0 z-0">
+          <CarouselTransition />
+        </div>
+
+        {/* Texto y botón encima */}
+        <div className="absolute inset-0 z-50 flex flex-col justify-center items-center pb-14 text-center">
+          <BlurText
+            text="¡Haz la diferencia hoy!"
+            className="text-white font-bold mb-4 text-[clamp(35px,3vw,50px)] justify-center px-8"
+            onAnimationEnd={() => setShowButton(true)}
+          />
+
+          {inView && (
+            <BlurText
+              text="Con tu apoyo, podemos seguir transformando vidas y construyendo un futuro mejor para los niños y jóvenes en situación de vulnerabilidad. ¡Únete a nuestra causa y sé parte del cambio!"
+                            className="text-white text-[clamp(15px,1.8vw,25px)] font-bold leading-tight max-w-4xl md:px-7 sm:px-12 px-10 justify-center items-center"
+              onAnimationEnd={() => setShowButton(true)}
+            />
+          )}
+
+          {showButton && (
+            <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0}>
+              <button
+                type="button"
+                className="text-white bg-yellow-500 hover:bg-yellow-600 focus:outline-none focus:ring-4 focus:ring-yellow-400 font-semibold rounded-full text-lg px-8 py-3 transition-transform transform hover:scale-105 mt-7"
+              >
+                ¿Cómo ayudar?
+              </button>
+            </FadeContent>
+          )}
+        </div>
+      </section>
+
+
     </div>
   );
 }
