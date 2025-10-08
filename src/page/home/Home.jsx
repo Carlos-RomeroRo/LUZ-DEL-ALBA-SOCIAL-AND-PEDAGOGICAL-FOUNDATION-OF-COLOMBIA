@@ -26,7 +26,7 @@ export default function Home() {
 
   return (
     <div className="relative w-full min-h-screen mx-auto overflow-hidden">
-      <section className="relative flex items-center justify-center min-h-screen w-full">
+      <section className="relative flex items-center justify-center min-h-screen w-full"> {/* First section */}
         {/* Video de fondo */}
         <video
           src="https://res.cloudinary.com/dadlhhv4t/video/upload/v1759612863/Ni%C3%B1os_jugando_Luz_del_Alba_co7wmr.mp4"
@@ -94,9 +94,9 @@ export default function Home() {
 
       </section>
       
-        <section className='relative w-full h-auto py-10 px-5 overflow-hidden'> 
+        <section className='relative w-full h-auto py-10 px-5 overflow-hidden'> {/* Second section */}
           {/* Fondo animado */}
-          <div className="absolute inset-0 -z-10">
+          <div className="absolute w-full h-full inset-0 -z-10">
             <Particles
               particleColors={['#12314D']}
               particleCount={800}
@@ -275,6 +275,45 @@ export default function Home() {
           )}
         </div>
       </section>
+     <section className="flex flex-col md:flex-row w-full h-auto bg-[#12314D] py-10 px-6">
+      {/* Columna izquierda: texto */}
+      <div className="flex flex-col justify-center items-center w-full md:w-1/2 text-center md:text-left mb-8 md:mb-0">
+        <h1 className="text-white text-center font-bold mb-4 text-[clamp(35px,4vw,70px)]">
+          Conoce Nuestra <br /> Misión
+        </h1>
+        <p className="text-white text-[clamp(20px,1.8vw,25px)] font-light leading-tight max-w-2xl text-center">
+          Descubre cómo trabajamos para transformar vidas y reconstruir comunidades.
+          ¡Conoce nuestra historia y únete a este propósito!
+        </p>
+
+        {/* 🔹 Botón visible solo en pantallas grandes */}
+        <button
+          type="button"
+          className="hidden lg:block text-white bg-yellow-500 hover:bg-yellow-600 focus:outline-none focus:ring-4 focus:ring-yellow-400 font-semibold rounded-full text-lg px-8 py-3 transition-transform transform hover:scale-105 mt-7"
+        >
+          Más de nosotros
+        </button>
+      </div>
+
+      {/* Columna derecha: imagen */}
+      <div className="flex flex-col justify-center items-center w-full md:w-1/2">
+        <img
+          src="https://res.cloudinary.com/dadlhhv4t/image/upload/v1759853647/f21_ougpj6.png"
+          alt="Nuestra misión"
+          className="w-full h-full object-cover rounded-lg shadow-lg"
+        />
+
+        {/* 🔹 Botón visible solo en pantallas pequeñas */}
+        <button
+          type="button"
+          className="block lg:hidden text-white bg-yellow-500 hover:bg-yellow-600 focus:outline-none focus:ring-4 focus:ring-yellow-400 font-semibold rounded-full text-lg px-8 py-3 transition-transform transform hover:scale-105 mt-7"
+        >
+          Más de nosotros
+        </button>
+      </div>
+    </section>
+
+
 
 
     </div>
