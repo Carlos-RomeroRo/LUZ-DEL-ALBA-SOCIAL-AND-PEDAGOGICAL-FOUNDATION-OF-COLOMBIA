@@ -1,3 +1,9 @@
+# 🌐 Fundación Luz del Alba – Colombia
+
+👉 **Visita la página oficial:** [fundacionluzdelalba.netlify.app](https://fundacionluzdelalba.netlify.app)
+
+---
+
 # Luz del Alba – Social and Pedagogical Foundation of Colombia
 
 This project is a **web application built with React and JavaScript** that presents the official website of the *Luz del Alba Social and Pedagogical Foundation of Colombia*. The foundation is a non-profit organization located in **El Copey, Cesar (Colombia)**, focused on helping children in vulnerable conditions by promoting education and rebuilding the social fabric through partnerships with local institutions.
@@ -43,25 +49,3 @@ Its goal is to improve the quality of life of the community and offer opportunit
 
    ```bash
    git clone https://github.com/Carlos-RomeroRo/LUZ-DEL-ALBA-SOCIAL-AND-PEDAGOGICAL-FOUNDATION-OF-COLOMBIA.git
-   ```
-2. Navigate into the project folder:
-
-   ```bash
-   cd LUZ-DEL-ALBA-SOCIAL-AND-PEDAGOGICAL-FOUNDATION-OF-COLOMBIA
-   ```
-3. Install dependencies:
-
-   ```bash
-   npm install
-   ```
-4. Run the development server:
-
-   ```bash
-   npm run dev
-   ```
-
----
-
-## 📌 License
-
-This project is open-source and available for educational and non-profit purposes.
