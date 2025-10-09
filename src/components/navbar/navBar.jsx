@@ -33,7 +33,12 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className={"w-full z-50 fixed top-0 left-0" + (scrolled ? "shadow-md backdrop-blur-md transition-all duration-300" : "bg-transparent transition-all duration-300")}>
+    <nav className={
+    "w-full z-50 fixed top-0 left-0 " +
+    (scrolled
+      ? "bg-[#212529] transition-all duration-300"
+      : "bg-transparent transition-all duration-300")
+  }>
       <div className="max-w-screen-xl mx-auto flex items-center justify-between p-4">
         
         {/* Logo */}

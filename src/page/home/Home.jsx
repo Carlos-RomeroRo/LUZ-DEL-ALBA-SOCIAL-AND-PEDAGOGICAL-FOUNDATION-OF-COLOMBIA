@@ -248,7 +248,7 @@ export default function Home() {
         </div>
 
         {/* Texto y botón encima */}
-        <div className="absolute inset-0 z-50 flex flex-col justify-center items-center pb-14 text-center">
+        <div className="absolute inset-0 z-30 flex flex-col justify-center items-center pb-14 text-center">
           <BlurText
             text="¡Haz la diferencia hoy!"
             className="text-white font-bold mb-4 text-[clamp(35px,3vw,50px)] justify-center px-8"
