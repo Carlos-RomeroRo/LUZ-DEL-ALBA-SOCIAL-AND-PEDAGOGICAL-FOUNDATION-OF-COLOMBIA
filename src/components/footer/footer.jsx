@@ -26,7 +26,7 @@ export default function footer() {
                 </div>
                 <div className="grid grid-cols-2 text-sm gap-x-3 gap-y-8 lg:w-2/3 sm:grid-cols-4 justify-items-end text-center">
                     <div className="space-y-3" bis_skin_checked="1">
-                        <h3 className="tracking-wide uppercase text-white">Company</h3>
+                        <h3 className="tracking-wide uppercase text-white">Sections Web Sites</h3>
                         <ul className="space-y-1">
                             <li>
                                 <a rel="noopener noreferrer" href="#">Home</a>

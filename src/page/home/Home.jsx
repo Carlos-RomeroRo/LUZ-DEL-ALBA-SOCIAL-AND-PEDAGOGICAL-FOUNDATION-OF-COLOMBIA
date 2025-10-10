@@ -7,7 +7,7 @@ import Particles from '../../components/animations/background/particles/particle
 import BlurText from '../../components/animations/text/blurText/blurText';
 import TextType from '../../components/animations/text/textType/textType';
 import CarouselTransition from "../../components/carousel/CarouselTransition";
-
+import WhatsAppButton from "../../components/whatsapp/WhatsAppButton";
 
 import '../../components/navbar/navBar';
 
@@ -26,6 +26,7 @@ export default function Home() {
 
   return (
     <div className="relative w-full min-h-screen mx-auto overflow-hidden">
+      <WhatsAppButton></WhatsAppButton>
       <section className="relative flex items-center justify-center min-h-screen w-full"> {/* First section */}
         {/* Video de fondo */}
         <video
@@ -129,7 +130,7 @@ export default function Home() {
                 <img
                   className="w-full h-full object-cover"
                   src="https://images.pexels.com/photos/1148998/pexels-photo-1148998.jpeg"
-                  alt="Acompañamiento social"
+                  alt="Acompañamiento social" 
                 />
                 <div className="p-4">
                   <h5 className="text-2xl font-bold text-white text-center">

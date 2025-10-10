@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import logo from "../../assets/photos/Icono.png";
+import { NavLink } from "react-router-dom";
+
 
 export default function Navbar() {
   /* Perfeccionar técnica para cuando es celular (propagation en motion)
@@ -48,10 +50,42 @@ export default function Navbar() {
 
         {/* Links - Desktop */}
         <div className={"hidden lg:flex gap-10 text-white"}>
-          <Link to="/" className="font-sofia font-bold text-lg hover:text-[#FAB922]">INICIO</Link>
-          <Link to="#" className="font-sofia font-bold text-lg hover:text-[#FAB922]">SERVICIOS</Link>
-          <Link to="/" className="font-sofia font-bold text-lg hover:text-[#FAB922]">¿CÓMO AYUDAR?</Link>
-          <Link to="/" className="font-sofia font-bold text-lg hover:text-[#FAB922]">¿QUIÉNES SOMOS?</Link>
+          <NavLink
+              to="/"
+              className={({ isActive }) =>
+                "font-sofia font-bold text-lg transition-colors duration-300 " +
+                (isActive ? "text-[#FAB922]" : "text-white hover:text-[#FAB922]")
+              }
+            >
+              INICIO
+        </NavLink>
+        <NavLink
+              to="/Services"
+              className={({ isActive }) =>
+                "font-sofia font-bold text-lg transition-colors duration-300 " +
+                (isActive ? "text-[#FAB922]" : "text-white hover:text-[#FAB922]")
+              }
+            >
+              SERVICIOS
+        </NavLink>
+        <NavLink
+              to="/Help"
+              className={({ isActive }) =>
+                "font-sofia font-bold text-lg transition-colors duration-300 " +
+                (isActive ? "text-[#FAB922]" : "text-white hover:text-[#FAB922]")
+              }
+            >
+              ¿CÓMO AYUDAR?
+        </NavLink>
+        <NavLink
+              to="/whoAreWe"
+              className={({ isActive }) =>
+                "font-sofia font-bold text-lg transition-colors duration-300 " +
+                (isActive ? "text-[#FAB922]" : "text-white hover:text-[#FAB922]")
+              }
+            >
+              ¿QUIÉNES SOMOS?
+        </NavLink>
         </div>
 
         {/* Botón hamburguesa - Mobile */}
