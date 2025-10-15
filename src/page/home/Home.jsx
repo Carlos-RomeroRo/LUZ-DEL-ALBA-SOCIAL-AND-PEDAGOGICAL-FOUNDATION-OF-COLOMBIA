@@ -1,4 +1,3 @@
-import { Card } from "flowbite-react";
 import { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 import AnimatedContent from "../../components/animations/animateComponents/animatedContent/animatedContent";
@@ -8,11 +7,12 @@ import BlurText from '../../components/animations/text/blurText/blurText';
 import TextType from '../../components/animations/text/textType/textType';
 import CarouselTransition from "../../components/carousel/CarouselTransition";
 import WhatsAppButton from "../../components/whatsapp/WhatsAppButton";
-
+import { useNavigate } from 'react-router-dom';
 import '../../components/navbar/navBar';
 
 
 export default function Home() {
+  const navigate = useNavigate();
   const { ref, inView } = useInView({
     triggerOnce: true, // Solo se ejecuta una vez
     threshold: 0.3, // Se activa cuando el 30% del elemento es visible
@@ -119,127 +119,138 @@ export default function Home() {
                 pauseDuration={1500}
                 showCursor={true}
                 cursorCharacter="|"
-                className="text-white text-[clamp(28px,6vw,60px)] font-bold text-center"
+                className="text-white text-[clamp(25px,5.8vw,60px)] font-bold text-center"
               />
             )}
           </div>
           
-          <div className="flex flex-wrap justify-center pt-12 gap-8">
+          <div className="flex flex-wrap justify-center pt-12 gap-8 w-full">
             <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0}>
-                <Card className="max-w-sm bg-[#12314D] rounded-lg overflow-hidden  transition-transform transform hover:scale-105 cursor-pointer">
+              <div className="w-full max-w-[24rem] h-auto bg-[#12314D] rounded-lg overflow-hidden transition-transform transform hover:scale-105 cursor-pointer shadow-lg">
+                {/* Imagen superior */}
                 <img
-                  className="w-full h-full object-cover"
                   src="https://images.pexels.com/photos/1148998/pexels-photo-1148998.jpeg"
-                  alt="Acompañamiento social" 
+                  alt="Acompañamiento social"
+                  className="w-full aspect-[4/3] object-cover object-center block"
                 />
-                <div className="p-4">
-                  <h5 className="text-2xl font-bold text-white text-center">
+
+                {/* Contenido */}
+                <div className="p-6 text-white">
+                  <h3 className="flex text-xl font-semibold mb-4 justify-center ">
                     Acompañamiento social
-                  </h5>
+                  </h3>
+
+                  <div className="flex justify-center">
+                    <button className="bg-yellow-400 hover:bg-yellow-500 text-[#fff] font-semibold px-6 py-2 rounded-full transition" onClick={() => navigate("/Services/Acompañamiento%20social")}>
+                      Ver más
+                    </button>
+                  </div>
                 </div>
-                <div className='flex flex-grow justify-center align-middle mb-4'>
-                <button
-                  type="button"
-                  className="text-white bg-yellow-500 hover:bg-yellow-600 focus:outline-none focus:ring-4 focus:ring-yellow-400 font-semibold rounded-full text-lg px-8 py-3 transition-transform transform hover:scale-105"
-                >
-                  Ver más
-                </button>
+              </div>
+          </FadeContent>
+          <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0}>
+              <div className="w-full max-w-[24rem] h-auto bg-[#12314D] rounded-lg overflow-hidden transition-transform transform hover:scale-105 cursor-pointer shadow-lg">
+                {/* Imagen superior */}
+                <img
+                  src="https://images.pexels.com/photos/1648387/pexels-photo-1648387.jpeg"
+                  alt="Asesorías enfocadas a familias"
+                  className="w-full aspect-[4/3] object-cover object-center block"
+                />
+
+                {/* Contenido */}
+                <div className="p-6 text-white">
+                  <h3 className="flex text-xl font-semibold mb-4 justify-center ">
+                    Asesorías enfocadas a familias
+                  </h3>
+
+                  <div className="flex justify-center">
+                    <button className="bg-yellow-400 hover:bg-yellow-500 text-[#fff] font-semibold px-6 py-2 rounded-full transition"
+                    onClick={() => navigate("/Services/Asesorías%20enfocadas%20a%20familias")}>
+                      Ver más
+                    </button>
+                  </div>
                 </div>
-              </Card>
-            </FadeContent>
-            
+              </div>
+          </FadeContent>
             <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0}>
-                <Card className="max-w-sm bg-[#12314D] rounded-lg overflow-hidden  transition-transform transform hover:scale-105 cursor-pointer">
-                  <img
-                    className="w-full h-full object-cover"
-                    src="https://images.pexels.com/photos/1648387/pexels-photo-1648387.jpeg"
-                    alt="Asesorías enfocadas a familias"
-                  />
-                  <div className="p-4">
-                    <h5 className="text-2xl font-bold text-white text-center">
-                      Asesorías enfocadas a familias
-                    </h5>
+              <div className="w-full max-w-[24rem] h-auto bg-[#12314D] rounded-lg overflow-hidden transition-transform transform hover:scale-105 cursor-pointer shadow-lg">
+                {/* Imagen superior */}
+                <img
+                  src="https://images.pexels.com/photos/3992949/pexels-photo-3992949.jpeg"
+                  alt="Seguimiento pedagógico"
+                  className="w-full aspect-[4/3] object-cover object-center block"
+                />
+
+                {/* Contenido */}
+                <div className="p-6 text-white">
+                  <h3 className="flex text-xl font-semibold mb-4 justify-center ">
+                    Seguimiento pedagógico
+                  </h3>
+
+                  <div className="flex justify-center">
+                    <button className="bg-yellow-400 hover:bg-yellow-500 text-[#fff] font-semibold px-6 py-2 rounded-full transition"
+                    onClick={() => navigate("/Services/Seguimiento%20pedagógico")}>
+                      Ver más
+                    </button>
                   </div>
-                  <div className='flex flex-grow  justify-center align-middle mb-4'>
-                  <button
-                    type="button"
-                    className="text-white bg-yellow-500 hover:bg-yellow-600 focus:outline-none focus:ring-4 focus:ring-yellow-400 font-semibold rounded-full text-lg px-8 py-3 transition-transform transform hover:scale-105"
-                  >
-                    Ver más
-                  </button>
+                </div>
+              </div>
+          </FadeContent>
+          <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0}>
+              <div className="w-full max-w-[24rem] h-auto bg-[#12314D] rounded-lg overflow-hidden transition-transform transform hover:scale-105 cursor-pointer shadow-lg">
+                {/* Imagen superior */}
+                <img
+                  src="https://images.pexels.com/photos/208216/pexels-photo-208216.jpeg"
+                  alt="Fortalecimiento espiritual"
+                  className="w-full aspect-[4/3] object-cover object-center block"
+                />
+
+                {/* Contenido */}
+                <div className="p-6 text-white">
+                  <h3 className="flex text-xl font-semibold mb-4 justify-center ">
+                    Fortalecimiento espiritual
+                  </h3>
+
+                  <div className="flex justify-center">
+                    <button className="bg-yellow-400 hover:bg-yellow-500 text-[#fff] font-semibold px-6 py-2 rounded-full transition"
+                    onClick={() => navigate("/Services/Fortalecimiento%20espiritual")}>
+                      Ver más
+                    </button>
                   </div>
-                </Card>
-            </FadeContent>
-            
-            <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0}>
-                 <Card className="max-w-sm bg-[#12314D] rounded-lg overflow-hidden  transition-transform transform hover:scale-105 cursor-pointer">
-                  <img
-                    className="w-full h-full object-cover"
-                    src="https://images.pexels.com/photos/3992949/pexels-photo-3992949.jpeg"
-                    alt="Seguimiento pedagógico"
-                  />
-                  <div className="p-4">
-                    <h5 className="text-2xl font-bold text-white text-center">
-                      Seguimiento pedagógico
-                    </h5>
+                </div>
+              </div>
+          </FadeContent>
+
+          
+
+
+          <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0}>
+              <div className="w-full max-w-[24rem] h-auto bg-[#12314D] rounded-lg overflow-hidden transition-transform transform hover:scale-105 cursor-pointer shadow-lg">
+                {/* Imagen superior */}
+                <img
+                  src="https://images.pexels.com/photos/1449934/pexels-photo-1449934.jpeg"
+                  alt="Actividades lúdico-recreativas"
+                  className="w-full aspect-[4/3] object-cover object-center block"
+                />
+
+                {/* Contenido */}
+                <div className="p-6 text-white">
+                  <h3 className="flex text-xl font-semibold mb-4 justify-center ">
+                    Actividades lúdico-recreativas
+                  </h3>
+
+                  <div className="flex justify-center">
+                    <button className="bg-yellow-400 hover:bg-yellow-500 text-[#fff] font-semibold px-6 py-2 rounded-full transition"
+                    onClick={() => navigate("/Services/Actividades%20lúdico-recreativas")}>
+                      Ver más
+                    </button>
                   </div>
-                  <div className='flex flex-grow justify-center align-middle mb-4'>
-                  <button
-                    type="button"
-                    className="text-white bg-yellow-500 hover:bg-yellow-600 focus:outline-none focus:ring-4 focus:ring-yellow-400 font-semibold rounded-full text-lg px-8 py-3 transition-transform transform hover:scale-105"
-                  >
-                    Ver más
-                  </button>
-                  </div>
-                </Card>
-            </FadeContent>
-           
-            <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0}>
-                <Card className="max-w-sm bg-[#12314D] rounded-lg overflow-hidden  transition-transform transform hover:scale-105 cursor-pointer">
-                  <img
-                    className="w-full h-full object-cover"
-                    src="https://images.pexels.com/photos/208216/pexels-photo-208216.jpeg"
-                    alt="Jornada de fortalecimiento espiritual"
-                  />
-                  <div className="p-4">
-                    <h5 className="text-2xl font-bold text-white text-center">
-                      Fortalecimiento espiritual
-                    </h5>
-                  </div>
-                  <div className='flex flex-grow justify-center align-middle mb-4'>
-                  <button
-                    type="button"
-                    className="text-white bg-yellow-500 hover:bg-yellow-600 focus:outline-none focus:ring-4 focus:ring-yellow-400 font-semibold rounded-full text-lg px-8 py-3 transition-transform transform hover:scale-105"
-                  >
-                    Ver más
-                  </button>
-                  </div>
-                </Card>
-            </FadeContent>
-            
-            <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0}>
-                <Card className="max-w-sm bg-[#12314D] rounded-lg overflow-hidden transition-transform transform hover:scale-105 cursor-pointer">
-                  <img
-                    className="w-full h-full object-cover"
-                    src="https://images.pexels.com/photos/1449934/pexels-photo-1449934.jpeg"
-                    alt="Actividades lúdico-recreativas"
-                  />
-                  <div className="p-4">
-                    <h5 className="text-2xl font-bold text-white text-center">
-                      Actividades <br />lúdico-recreativas
-                    </h5>
-                  </div>
-                  <div className='flex flex-grow justify-center align-middle mb-4'>
-                  <button
-                    type="button"
-                    className="text-white bg-yellow-500 hover:bg-yellow-600 focus:outline-none focus:ring-4 focus:ring-yellow-400 font-semibold rounded-full text-lg px-8 py-3 transition-transform transform hover:scale-105"
-                  >
-                    Ver más
-                  </button>
-                  </div>
-                </Card>
-            </FadeContent>
-          </div>
+                </div>
+              </div>
+          </FadeContent>
+        </div>
+
+
         </section>
 
         <section className="relative flex min-h-screen w-full bg-black">
