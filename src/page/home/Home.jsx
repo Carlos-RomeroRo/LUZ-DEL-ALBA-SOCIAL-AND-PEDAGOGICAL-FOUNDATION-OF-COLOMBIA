@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
+import { useNavigate } from 'react-router-dom';
 import AnimatedContent from "../../components/animations/animateComponents/animatedContent/animatedContent";
 import FadeContent from '../../components/animations/animateComponents/fadeContent/fadeContent';
 import Particles from '../../components/animations/background/particles/particles';
 import BlurText from '../../components/animations/text/blurText/blurText';
 import TextType from '../../components/animations/text/textType/textType';
 import CarouselTransition from "../../components/carousel/CarouselTransition";
-import WhatsAppButton from "../../components/whatsapp/WhatsAppButton";
-import { useNavigate } from 'react-router-dom';
 import '../../components/navbar/navBar';
+import WhatsAppButton from "../../components/whatsapp/WhatsAppButton";
 
 
 export default function Home() {
@@ -30,13 +30,17 @@ export default function Home() {
       <section className="relative flex items-center justify-center min-h-screen w-full"> {/* First section */}
         {/* Video de fondo */}
         <video
-          src="https://res.cloudinary.com/dadlhhv4t/video/upload/v1760115468/Video_Services_jebd3o.mp4"
+          src="https://res.cloudinary.com/dadlhhv4t/video/upload/f_auto,q_auto,vc_auto,w_1280,h_720,du_6/v1760115468/Video_Services_jebd3o.mp4"
           autoPlay
           muted
           loop
           playsInline
+          preload="none"
+          poster="https://res.cloudinary.com/dadlhhv4t/video/upload/f_auto,q_auto,w_1280,h_720/Video_Services_jebd3o.jpg"
+          aria-hidden="true"
           className="absolute inset-0 w-full h-full object-cover -z-10"
-        ></video>
+        />
+
 
         {/* Capa oscura */} 
         <div className="absolute inset-0 bg-black bg-opacity-70"></div>

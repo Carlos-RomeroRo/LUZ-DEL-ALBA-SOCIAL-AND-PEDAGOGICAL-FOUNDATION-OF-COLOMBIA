@@ -1,11 +1,11 @@
-import { useRef, useEffect, useState } from "react";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useEffect, useRef, useState } from "react";
 import { useInView } from "react-intersection-observer";
+import { useNavigate, useParams } from "react-router-dom";
 
-import WhatsAppButton from "../../components/whatsapp/WhatsAppButton";
 import FadeContent from "../../components/animations/animateComponents/fadeContent/fadeContent";
 import TextType from "../../components/animations/text/textType/textType";
+import WhatsAppButton from "../../components/whatsapp/WhatsAppButton";
 
 // ✅ Componente reutilizable de testimonio
 function TestimonialCard({ name, role, image, testimonialShort }) {
@@ -204,13 +204,17 @@ export default function Service() {
       {/* --- HERO --- */}
       <section className="relative flex items-center justify-center min-h-screen w-full">
         <video
-          src="https://res.cloudinary.com/dadlhhv4t/video/upload/v1761408759/VideoNuevoHome_dhztu4.mp4"
+          src="https://res.cloudinary.com/dadlhhv4t/video/upload/f_auto,q_auto,vc_auto,w_1280,h_720,du_6/v1761408759/VideoNuevoHome_dhztu4.mp4"
           autoPlay
           muted
           loop
           playsInline
+          preload="none"
+          poster="https://res.cloudinary.com/dadlhhv4t/video/upload/f_auto,q_auto,w_1280,h_720/VideoNuevoHome_dhztu4.jpg"
+          aria-hidden="true"
           className="absolute inset-0 w-full h-full object-cover -z-10"
-        ></video>
+        />
+
         <div className="absolute inset-0 bg-black bg-opacity-70"></div>
 
         <div className="relative z-10 flex flex-col items-center justify-center text-center px-4 max-w-3xl">
