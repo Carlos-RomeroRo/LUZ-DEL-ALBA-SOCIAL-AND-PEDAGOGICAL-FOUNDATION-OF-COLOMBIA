@@ -15,7 +15,7 @@ export default function Home() {
   const navigate = useNavigate();
   const { ref, inView } = useInView({
     triggerOnce: true, // Solo se ejecuta una vez
-    threshold: 0.3, // Se activa cuando el 30% del elemento es visible
+    threshold: 0.2, // Se activa cuando el 30% del elemento es visible
   });
   const [showButton, setShowButton] = useState(false);
   useEffect(() => {
@@ -30,7 +30,7 @@ export default function Home() {
       <section className="relative flex items-center justify-center min-h-screen w-full"> {/* First section */}
         {/* Video de fondo */}
         <video
-          src="https://res.cloudinary.com/dadlhhv4t/video/upload/v1759612863/Ni%C3%B1os_jugando_Luz_del_Alba_co7wmr.mp4"
+          src="https://res.cloudinary.com/dadlhhv4t/video/upload/v1760115468/Video_Services_jebd3o.mp4"
           autoPlay
           muted
           loop
@@ -39,7 +39,7 @@ export default function Home() {
         ></video>
 
         {/* Capa oscura */} 
-        <div className="absolute inset-0 bg-black bg-opacity-60"></div>
+        <div className="absolute inset-0 bg-black bg-opacity-70"></div>
 
         {/* Contenido */}
         <div className="relative z-10 flex flex-col items-center justify-center text-center px-4 max-w-3xl">
@@ -200,7 +200,7 @@ export default function Home() {
               <div className="w-full max-w-[24rem] h-auto bg-[#12314D] rounded-lg overflow-hidden transition-transform transform hover:scale-105 cursor-pointer shadow-lg">
                 {/* Imagen superior */}
                 <img
-                  src="https://images.pexels.com/photos/208216/pexels-photo-208216.jpeg"
+                  src="https://res.cloudinary.com/dadlhhv4t/image/upload/v1761407174/Jesus_con_ni%C3%B1os_irp7ll.png"
                   alt="Fortalecimiento espiritual"
                   className="w-full aspect-[4/3] object-cover object-center block"
                 />

@@ -12,46 +12,47 @@ function TestimonialCard({ name, role, image, testimonialShort }) {
   const isBenefactor = role === "Benefactor";
 
   return (
-    <div
-      className={`card w-96 shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-100 rounded-2xl overflow-hidden ${
-        isBenefactor ? "bg-blue-50" : "bg-green-50"
-      }`}
-    >
-      <figure className="relative">
-        <img
-          src={image}
-          alt={name}
-          className="h-56 w-full object-cover transition-transform duration-300 hover:scale-105"
-        />
-        <span
-          className={`absolute top-3 right-3 text-white text-sm font-semibold px-3 py-1 rounded-full ${
-            isBenefactor ? "bg-yellow-400" : "bg-[#12314D]"
+  <div
+    className={`card w-96 shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-100 rounded-2xl overflow-hidden bg-white`}
+  >
+    {/* Contenedor de imagen con proporción fija para retratos */}
+    <figure className="relative w-full aspect-[3/4] overflow-hidden rounded-t-2xl">
+      <img
+        src={image}
+        alt={name}
+        className="w-full h-full object-cover object-top transition-transform duration-300 hover:scale-105"
+      />
+      <span
+        className={`absolute top-3 right-3 text-white text-sm font-semibold px-3 py-1 rounded-full ${
+          isBenefactor ? "bg-yellow-400" : "bg-[#12314D]"
+        }`}
+      >
+        {role}
+      </span>
+    </figure>
+
+    {/* Cuerpo de la tarjeta */}
+    <div className="card-body px-5 pb-6">
+      <h2 className="card-title text-lg font-semibold text-gray-800 justify-center text-center mb-1 mt-1">
+        {name}
+      </h2>
+      <p className="text-gray-600 text-sm text-justify">{testimonialShort}</p>
+
+      <div className="mt-4 flex justify-center">
+        <button
+          className={`btn btn-sm text-white font-semibold px-6 py-2 rounded-full transition ${
+            isBenefactor
+              ? "bg-yellow-400 hover:bg-yellow-500"
+              : "bg-[#12314D] hover:bg-[#081622]"
           }`}
         >
-          {role}
-        </span>
-      </figure>
-
-      <div className="card-body px-5 pb-6">
-        <h2 className="card-title text-lg font-semibold text-gray-800">
-          {name}
-        </h2>
-        <p className="text-gray-600 text-sm">{testimonialShort}</p>
-
-        <div className="mt-4 flex justify-center">
-          <button
-            className={`btn btn-sm text-white font-semibold px-6 py-2 rounded-full transition ${
-              isBenefactor
-                ? "bg-yellow-400 hover:bg-yellow-500"
-                : "bg-[#12314D] hover:bg-[#081622]"
-            }`}
-          >
-            Leer más
-          </button>
-        </div>
+          Leer más
+        </button>
       </div>
     </div>
-  );
+  </div>
+);
+
 }
 
 export default function Service() {
@@ -98,21 +99,21 @@ export default function Service() {
 
   const Testimonials = [
     {
-      name: "Juan Pérez",
+      name: "Keler Medina",
       role: "Beneficiario",
       image: "https://res.cloudinary.com/dadlhhv4t/image/upload/v1759853650/f8_nsqswc.png",
       testimonialShort:
-        "Gracias a este programa pude mejorar mi calidad de vida y acceder a oportunidades que antes veía lejanas.",
+        "Me siento bien con lo que recibo de la fundacion porque me aporta en el estudio y ha sido de gran apoyo.",
       testimonialComplete:
         "El apoyo recibido no solo cambió mi situación económica, sino también mi perspectiva sobre el futuro.",
       video: "",
     },
     {
-      name: "María Rodríguez",
+      name: "Belkis Macea",
       role: "Benefactor",
       image: "https://res.cloudinary.com/dadlhhv4t/image/upload/v1759853651/f9_tp5a86.png",
       testimonialShort:
-        "Ser benefactora ha sido una experiencia transformadora. Saber que puedo marcar la diferencia me llena de orgullo.",
+        "Lo que más me motiva es contribuir a la felicidad de quienes más lo necesitan y ver el impacto inmediato. Servir desarrolla sensibilidad y bondad, haciendo nuestras acciones más acertadas.",
       testimonialComplete:
         "A través de mis aportes he podido ver historias de superación increíbles. Me motiva ver cómo cada aporte genera esperanza.",
       video: "",
@@ -203,7 +204,7 @@ export default function Service() {
       {/* --- HERO --- */}
       <section className="relative flex items-center justify-center min-h-screen w-full">
         <video
-          src="https://res.cloudinary.com/dadlhhv4t/video/upload/v1760115468/Video_Services_jebd3o.mp4"
+          src="https://res.cloudinary.com/dadlhhv4t/video/upload/v1761408759/VideoNuevoHome_dhztu4.mp4"
           autoPlay
           muted
           loop
