@@ -58,7 +58,7 @@ export default function Home() {
             onAnimationEnd={() => setShowButton(true)}
           />
           {showButton && (
-            <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0}>
+            <FadeContent blur={true} duration={500} easing="ease-out" initialOpacity={0}>
               <div>
                 <button
                   type="button"

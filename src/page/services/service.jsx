@@ -1,8 +1,7 @@
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
-import { useInView } from "react-intersection-observer";
 import { useNavigate, useParams } from "react-router-dom";
-
+import { useInView } from "react-intersection-observer";
 import FadeContent from "../../components/animations/animateComponents/fadeContent/fadeContent";
 import TextType from "../../components/animations/text/textType/textType";
 import WhatsAppButton from "../../components/whatsapp/WhatsAppButton";
@@ -10,6 +9,7 @@ import WhatsAppButton from "../../components/whatsapp/WhatsAppButton";
 // ✅ Componente reutilizable de testimonio
 function TestimonialCard({ name, role, image, testimonialShort }) {
   const isBenefactor = role === "Benefactor";
+  
 
   return (
   <div
@@ -62,6 +62,7 @@ export default function Service() {
   const [currentModalIndex, setCurrentModalIndex] = useState(null);
   const navigate = useNavigate();
   const { serviceTitle } = useParams();
+  
 
   const services = [
     {
@@ -144,10 +145,6 @@ export default function Service() {
     }
   };
 
-  const { ref, inView } = useInView({
-    triggerOnce: true,
-    threshold: 0.3,
-  });
 
   // 🔄 Auto-scroll cada 4s
   useEffect(() => {
@@ -241,8 +238,7 @@ export default function Service() {
 
       {/* --- SERVICES SECTION --- */}
       <section className="relative w-full h-auto py-16 px-5 overflow-hidden">
-        <div ref={ref} className="w-full flex justify-center items-center mb-12">
-          {inView && (
+        <div className="w-full flex justify-center items-center mb-12">
             <TextType
               text={[
                 "Nuestros servicios",
@@ -255,7 +251,6 @@ export default function Service() {
               cursorCharacter="|"
               className="text-white text-[clamp(28px,6vw,60px)] font-bold text-center"
             />
-          )}
         </div>
 
         {/* Flechas */}
@@ -316,11 +311,8 @@ export default function Service() {
 
       {/* --- TESTIMONIOS --- */}
       <section className="relative w-full h-auto py-16 px-5 overflow-hidden bg-[#12314D]">
-        <div
-          ref={ref}
-          className="w-full flex justify-center items-center mb-12 "
-        >
-          {inView && (
+        <div className="w-full flex justify-center items-center mb-12 ">
+          
             <TextType
               text={[
                 "Testimonios inspiradores",
@@ -333,7 +325,6 @@ export default function Service() {
               cursorCharacter="|"
               className="text-white text-[clamp(28px,6vw,60px)] font-bold text-center"
             />
-          )}
         </div>
 
         <div className="flex flex-wrap justify-center gap-10">
