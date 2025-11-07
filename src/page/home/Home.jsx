@@ -99,163 +99,97 @@ export default function Home() {
 
       </section>
       
-        <section className='relative w-full h-auto py-10 px-5 overflow-hidden'> {/* Second section */}
-          {/* Fondo animado */}
-          <div className="absolute w-full h-full inset-0 -z-10">
-            <Particles
-              particleColors={['#12314D']}
-              particleCount={800}
-              particleSpread={10}
-              speed={0.1}
-              particleBaseSize={150}
-              moveParticlesOnHover={true}
-              alphaParticles={false}
-              disableRotation={false}
-            />
-          </div>
+      <section className="relative w-full h-auto py-10 px-5 overflow-hidden">
+  {/* Fondo animado */}
+  <div className="absolute w-full h-full inset-0 -z-10">
+    <Particles
+      particleColors={["#12314D"]}
+      particleCount={800}
+      particleSpread={10}
+      speed={0.1}
+      particleBaseSize={150}
+      moveParticlesOnHover={true}
+      alphaParticles={false}
+      disableRotation={false}
+    />
+  </div>
 
+  {/* Título con efecto de tipeo */}
+  <div ref={ref} className="w-full flex justify-center items-center">
+    {inView && (
+      <TextType
+        text={["Nuestros servicios", "¿Qué ofrecemos?", "Nuestras especialidades"]}
+        typingSpeed={95}
+        pauseDuration={1500}
+        showCursor={true}
+        cursorCharacter="|"
+        className="text-white text-[clamp(25px,5.8vw,60px)] font-bold text-center"
+      />
+    )}
+  </div>
 
-          <div ref={ref} className="w-full flex justify-center items-center">
-            {inView && (
-              <TextType
-                text={["Nuestros servicios","¿Qué ofrecemos?","Nuestras especialidades"]}
-                typingSpeed={95}
-                pauseDuration={1500}
-                showCursor={true}
-                cursorCharacter="|"
-                className="text-white text-[clamp(25px,5.8vw,60px)] font-bold text-center"
-              />
-            )}
-          </div>
-          
-          <div className="flex flex-wrap justify-center pt-12 gap-8 w-full">
-            <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0}>
-              <div className="w-full max-w-[24rem] h-auto bg-[#12314D] rounded-lg overflow-hidden transition-transform transform hover:scale-105 cursor-pointer shadow-lg">
-                {/* Imagen superior */}
-                <img
-                  src="https://images.pexels.com/photos/1148998/pexels-photo-1148998.jpeg"
-                  alt="Acompañamiento social"
-                  className="w-full aspect-[4/3] object-cover object-center block"
-                />
-
-                {/* Contenido */}
-                <div className="p-6 text-white">
-                  <h3 className="flex text-xl font-semibold mb-4 justify-center ">
-                    Acompañamiento social
-                  </h3>
-
-                  <div className="flex justify-center">
-                    <button className="bg-yellow-400 hover:bg-yellow-500 text-[#fff] font-semibold px-6 py-2 rounded-full transition" onClick={() => navigate("/Services/Acompañamiento%20social")}>
-                      Ver más
-                    </button>
-                  </div>
-                </div>
-              </div>
-          </FadeContent>
-          <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0}>
-              <div className="w-full max-w-[24rem] h-auto bg-[#12314D] rounded-lg overflow-hidden transition-transform transform hover:scale-105 cursor-pointer shadow-lg">
-                {/* Imagen superior */}
-                <img
-                  src="https://images.pexels.com/photos/1648387/pexels-photo-1648387.jpeg"
-                  alt="Asesorías enfocadas a familias"
-                  className="w-full aspect-[4/3] object-cover object-center block"
-                />
-
-                {/* Contenido */}
-                <div className="p-6 text-white">
-                  <h3 className="flex text-xl font-semibold mb-4 justify-center ">
-                    Asesorías enfocadas a familias
-                  </h3>
-
-                  <div className="flex justify-center">
-                    <button className="bg-yellow-400 hover:bg-yellow-500 text-[#fff] font-semibold px-6 py-2 rounded-full transition"
-                    onClick={() => navigate("/Services/Asesorías%20enfocadas%20a%20familias")}>
-                      Ver más
-                    </button>
-                  </div>
-                </div>
-              </div>
-          </FadeContent>
-            <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0}>
-              <div className="w-full max-w-[24rem] h-auto bg-[#12314D] rounded-lg overflow-hidden transition-transform transform hover:scale-105 cursor-pointer shadow-lg">
-                {/* Imagen superior */}
-                <img
-                  src="https://images.pexels.com/photos/3992949/pexels-photo-3992949.jpeg"
-                  alt="Seguimiento pedagógico"
-                  className="w-full aspect-[4/3] object-cover object-center block"
-                />
-
-                {/* Contenido */}
-                <div className="p-6 text-white">
-                  <h3 className="flex text-xl font-semibold mb-4 justify-center ">
-                    Seguimiento pedagógico
-                  </h3>
-
-                  <div className="flex justify-center">
-                    <button className="bg-yellow-400 hover:bg-yellow-500 text-[#fff] font-semibold px-6 py-2 rounded-full transition"
-                    onClick={() => navigate("/Services/Seguimiento%20pedagógico")}>
-                      Ver más
-                    </button>
-                  </div>
-                </div>
-              </div>
-          </FadeContent>
-          <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0}>
-              <div className="w-full max-w-[24rem] h-auto bg-[#12314D] rounded-lg overflow-hidden transition-transform transform hover:scale-105 cursor-pointer shadow-lg">
-                {/* Imagen superior */}
-                <img
-                  src="https://res.cloudinary.com/dadlhhv4t/image/upload/v1761407174/Jesus_con_ni%C3%B1os_irp7ll.png"
-                  alt="Fortalecimiento espiritual"
-                  className="w-full aspect-[4/3] object-cover object-center block"
-                />
-
-                {/* Contenido */}
-                <div className="p-6 text-white">
-                  <h3 className="flex text-xl font-semibold mb-4 justify-center ">
-                    Fortalecimiento espiritual
-                  </h3>
-
-                  <div className="flex justify-center">
-                    <button className="bg-yellow-400 hover:bg-yellow-500 text-[#fff] font-semibold px-6 py-2 rounded-full transition"
-                    onClick={() => navigate("/Services/Fortalecimiento%20espiritual")}>
-                      Ver más
-                    </button>
-                  </div>
-                </div>
-              </div>
-          </FadeContent>
-
-          
-
-
-          <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0}>
-              <div className="w-full max-w-[24rem] h-auto bg-[#12314D] rounded-lg overflow-hidden transition-transform transform hover:scale-105 cursor-pointer shadow-lg">
-                {/* Imagen superior */}
-                <img
-                  src="https://images.pexels.com/photos/1449934/pexels-photo-1449934.jpeg"
-                  alt="Actividades lúdico-recreativas"
-                  className="w-full aspect-[4/3] object-cover object-center block"
-                />
-
-                {/* Contenido */}
-                <div className="p-6 text-white">
-                  <h3 className="flex text-xl font-semibold mb-4 justify-center ">
-                    Actividades lúdico-recreativas
-                  </h3>
-
-                  <div className="flex justify-center">
-                    <button className="bg-yellow-400 hover:bg-yellow-500 text-[#fff] font-semibold px-6 py-2 rounded-full transition"
-                    onClick={() => navigate("/Services/Actividades%20lúdico-recreativas")}>
-                      Ver más
-                    </button>
-                  </div>
-                </div>
-              </div>
-          </FadeContent>
+  {/* Contenedor de tarjetas */}
+  <div className="flex flex-wrap justify-center pt-12 gap-8 w-full">
+    {[
+      {
+        src: "https://images.pexels.com/photos/1148998/pexels-photo-1148998.jpeg",
+        title: "Acompañamiento social",
+        link: "/Services/Acompañamiento%20social",
+      },
+      {
+        src: "https://images.pexels.com/photos/1648387/pexels-photo-1648387.jpeg",
+        title: "Asesorías enfocadas a familias",
+        link: "/Services/Asesorías%20enfocadas%20a%20familias",
+      },
+      {
+        src: "https://images.pexels.com/photos/3992949/pexels-photo-3992949.jpeg",
+        title: "Seguimiento pedagógico",
+        link: "/Services/Seguimiento%20pedagógico",
+      },
+      {
+        src: "https://res.cloudinary.com/dadlhhv4t/image/upload/f_auto,q_auto,w_800/v1761407174/Jesus_con_ni%C3%B1os_irp7ll.png",
+        title: "Fortalecimiento espiritual",
+        link: "/Services/Fortalecimiento%20espiritual",
+      },
+      {
+        src: "https://images.pexels.com/photos/1449934/pexels-photo-1449934.jpeg",
+        title: "Actividades lúdico-recreativas",
+        link: "/Services/Actividades%20lúdico-recreativas",
+      },
+    ].map(({ src, title, link }) => (
+      <div
+        key={title}
+        className="w-full max-w-[24rem] h-auto bg-[#12314D] rounded-lg overflow-hidden shadow-lg transition-transform transform hover:scale-105 cursor-pointer"
+      >
+        {/* Imagen con lazy loading y fade-in */}
+        <div className="relative aspect-[4/3] bg-[#0f2438]">
+          <img
+            src={`${src}${src.includes("pexels") ? "?auto=compress&cs=tinysrgb&w=800" : ""}`}
+            alt={title}
+            loading="lazy"
+            decoding="async"
+            className="absolute inset-0 w-full h-full object-cover object-center opacity-0 transition-opacity duration-700"
+            onLoad={(e) => e.currentTarget.classList.add("opacity-100")}
+          />
         </div>
 
-
-        </section>
+        {/* Contenido */}
+        <div className="p-6 text-white flex flex-col justify-between min-h-[120px]">
+          <h3 className="text-xl font-semibold mb-4 text-center">{title}</h3>
+          <div className="flex justify-center">
+            <button
+              onClick={() => navigate(link)}
+              className="bg-yellow-400 hover:bg-yellow-500 text-white font-semibold px-6 py-2 rounded-full transition-transform transform hover:scale-105"
+            >
+              Ver más
+            </button>
+          </div>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
+  
 
         <section className="relative flex min-h-screen w-full bg-black">
         {/* Carrusel en el fondo */}
@@ -264,23 +198,16 @@ export default function Home() {
         </div>
 
         {/* Texto y botón encima */}
-        <div className="absolute inset-0 z-30 flex flex-col justify-center items-center pb-14 text-center">
-          <BlurText
-            text="¡Haz la diferencia hoy!"
-            className="text-white font-bold mb-4 text-[clamp(35px,3vw,50px)] justify-center px-8"
-            onAnimationEnd={() => setShowButton(true)}
-          />
+          <div className="absolute inset-0 z-30 flex flex-col justify-center items-center pb-14 text-center">
+            <h2 className="text-white font-bold mb-4 text-[clamp(35px,3vw,50px)] justify-center px-8">
+              ¡Haz la diferencia hoy!
+            </h2>
 
-          {inView && (
-            <BlurText
-              text="Con tu apoyo, podemos seguir transformando vidas y construyendo un futuro mejor para los niños y jóvenes en situación de vulnerabilidad. ¡Únete a nuestra causa y sé parte del cambio!"
-                            className="text-white text-[clamp(15px,1.8vw,25px)] font-bold leading-tight max-w-4xl md:px-7 sm:px-12 px-10 justify-center items-center"
-              onAnimationEnd={() => setShowButton(true)}
-            />
-          )}
+            <p className="text-white text-[clamp(15px,1.8vw,25px)] font-bold leading-tight max-w-4xl md:px-7 sm:px-12 px-10 justify-center items-center">
+              Con tu apoyo, podemos seguir transformando vidas y construyendo un futuro mejor para los niños y jóvenes en situación de vulnerabilidad. ¡Únete a nuestra causa y sé parte del cambio!
+            </p>
 
-          {showButton && (
-            <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0}>
+            <FadeContent blur duration={1000} easing="ease-out" initialOpacity={0}>
               <button
                 type="button"
                 className="text-white bg-yellow-500 hover:bg-yellow-600 focus:outline-none focus:ring-4 focus:ring-yellow-400 font-semibold rounded-full text-lg px-8 py-3 transition-transform transform hover:scale-105 mt-7"
@@ -288,9 +215,10 @@ export default function Home() {
                 ¿Cómo ayudar?
               </button>
             </FadeContent>
-          )}
-        </div>
+          </div>
       </section>
+
+
      <section className="flex flex-col md:flex-row w-full h-auto bg-[#12314D] py-10 px-6">
       {/* Columna izquierda: texto */}
       <div className="flex flex-col justify-center items-center w-full md:w-1/2 text-center md:text-left mb-8 md:mb-0">
